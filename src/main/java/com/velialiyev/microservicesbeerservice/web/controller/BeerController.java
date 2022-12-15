@@ -5,6 +5,7 @@ import com.velialiyev.microservicesbeerservice.web.model.BeerDto;
 import com.velialiyev.microservicesbeerservice.web.model.BeerPagedList;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -24,12 +25,12 @@ public class BeerController {
     }
 
     @PostMapping
-    public ResponseEntity createNewBeer(@RequestBody BeerDto beerDto){
+    public ResponseEntity createNewBeer(@RequestBody @Validated BeerDto beerDto){
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
     @PutMapping("/{uuid}")
-    public ResponseEntity<String> updateBeerById(@PathVariable UUID uuid, @RequestBody BeerDto beerDto){
+    public ResponseEntity<String> updateBeerById(@PathVariable UUID uuid, @RequestBody @Validated BeerDto beerDto){
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
