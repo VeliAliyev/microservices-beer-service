@@ -1,8 +1,6 @@
 package com.velialiyev.microservicesbeerservice.web.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.velialiyev.microservicesbeerservice.web.model.BeerDto;
-import com.velialiyev.microservicesbeerservice.web.model.BeerPagedList;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
