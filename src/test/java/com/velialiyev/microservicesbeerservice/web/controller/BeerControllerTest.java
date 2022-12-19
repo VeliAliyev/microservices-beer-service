@@ -1,6 +1,7 @@
 package com.velialiyev.microservicesbeerservice.web.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.velialiyev.microservicesbeerservice.bootstrap.BeerLoader;
 import com.velialiyev.microservicesbeerservice.services.BeerService;
 import com.velialiyev.microservicesbeerservice.web.model.BeerDto;
 import com.velialiyev.microservicesbeerservice.web.model.BeerStyleEnum;
@@ -70,7 +71,7 @@ class BeerControllerTest {
                 .beerName("My Beer")
                 .beerStyle(BeerStyleEnum.ALE)
                 .price(new BigDecimal("2.99"))
-                .upc(123123123123L)
+                .upc(BeerLoader.BEER_1_UPC)
                 .build();
     }
 }
